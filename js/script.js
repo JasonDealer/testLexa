@@ -46,7 +46,7 @@ $(document).ready(function(){
             })     
 		});*/
 		
-		function toggleSlide(item) {
+/* 		function toggleSlide(item) {
 			$(item).each(function(i) {
 				$(this).on('click', function(e) {
 					e.preventDefault();
@@ -57,7 +57,7 @@ $(document).ready(function(){
 		};
 
 		toggleSlide('.catalog__link');
-		toggleSlide('.catalog__back');
+		toggleSlide('.catalog__back'); */
 
 
 
@@ -66,11 +66,6 @@ $(document).ready(function(){
 	$('[data-modal=consultation]').on('click', function(){
 		$('.overlay, #consultation').fadeIn();
 	});
-
-	$('.modal__close').on('click', function(){
-		$('.overlay, #consultation, #order, #confirm').fadeOut()
-	});
-
 
 	/*$('.button_submit').on('click', function(){
 		$('.overlay, #consultation, #order, #confirm').fadeOut();
@@ -186,7 +181,7 @@ $(document).ready(function(){
 						<img src="img/PulseOnSale.jpg" alt="puls" class="catalog__img" />
 						<div class="catalog__subtitle">Пульсометр Polar FT1</div>
 						<div class="catalog__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-						<a href="" class="catalog__link">ПОДРОБНЕЕ</a>
+						<a data-modal="desu" class="catalog__link">ПОДРОБНЕЕ</a>
 					</div>
 					<div class="catalog__list">
 						<ul class="catalog__list_items">
@@ -195,7 +190,7 @@ $(document).ready(function(){
 							<li>Берите</li>
 							<li>Не пожалеете</li>
 						</ul>
-						<a href="#" class="catalog__back">назад</a>
+						<a class="catalog__back">назад</a>
 					</div>
 				</div>
 				<hr />
@@ -223,5 +218,13 @@ $(document).ready(function(){
 /* 	$('.modal__close').on('click', function(){
 		$('.overlay, #consultation, #order, #confirm').fadeOut()
 	}); */
+	$('.catalog__link').on('click', function() {
+		$('.overlay').fadeIn();
+		$('.good_desc').removeClass('hide');
+	});
 
+	$('.modal__close').on('click', function(){
+		$('.overlay, #consultation, #order, #confirm').fadeOut();
+		$('.good_desc').addClass('hide');
+	});
 });     

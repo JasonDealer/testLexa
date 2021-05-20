@@ -13,8 +13,10 @@
             <div class="container">
                 <header class="header">
                     
-                    <div class="header__official">Официальный представитель <span>меня</span></div>
-                    <div class="header__contacts"><a href="tel:+74999228974" class="header__phone">+8 (800) 555-35-35</a> <button data-modal="consultation" class="button">заказать звонок</button></div>
+                    <div class="header__official">Официальный представитель <span>меня</span>
+                    <span class="bbb"><a href="index.html">На главную</a></span>
+                    </div>
+                    <div class="header__contacts"><a href="tel:+88005553535" class="header__phone">+8 (800) 555-35-35</a> <button data-modal="consultation" class="button">заказать звонок</button></div>
                 </header>
                 <div class="promo__wrapper">
                     <h1 class="promo__title">КАТАЛОГ</h1>
@@ -116,11 +118,6 @@
                 <div class="list_goods">
 
                 </div>
-                <div class="good_desc">
-                    <div class="pic"></div>
-                    <div class="descc"></div>
-                    <div class="pricee"></div>
-                </div>
             </div>
         </section>
         <footer class="footer_cat">
@@ -135,7 +132,27 @@
         </footer>
         <!--Модальные окна-->
         <div class="overlay">
-            <div class="modal" id="consultation">
+            <div class="good_desc hide" id="desu">
+                <div class="modal__close">&times;</div>
+                <div class="pic">
+                    <img src="./img/PulseOnSale.jpg" alt="5">
+                </div>
+                <div class="subb">
+                    <h2 class=" subbbb">Описание товара</h2>
+                </div>
+                <div class="descc">
+                    <ul class="catalog__list_items desssss">
+                        <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                        <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                        <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                    </ul>
+                </div>
+                <div class="pricee">
+                    Цена: <span>140 р.</span> <a class="btn-ens-action btn-ens-style" data-rel="72a3d5a1254871">Купить</a>
+                </div>
+            </div>
+                        <div class="modal" id="consultation">
                 <div class="modal__close">&times;</div>
                 <div class="modal__subtitle">Просто заполните форму заявки</div>
                 <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
