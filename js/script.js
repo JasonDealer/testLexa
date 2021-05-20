@@ -204,6 +204,10 @@ $(document).ready(function(){
 				</div>
 			`
 			$('.list_goods').append(item);
+			$('.catalog__link').on('click', function() {
+				$('.overlay').fadeIn();
+				$('.good_desc').removeClass('hide');
+			});
 		}
 		$('.wpp, .filter').removeClass('hide');
 		$('.cat_furniture, .cat_electronic, .cat_summer').addClass('hide');
