@@ -118,7 +118,7 @@ $(document).ready(function(){
 			type: "POST",
 			url: "mailer/smart.php",
 			data: $(this).serialize()
-		}).done(function(){
+		}).fail(function(){
 			$(this).find("input").val("");
 			$('.overlay, #consultation, #order, #confirm').fadeOut();
 			$('.overlay, #confirm').fadeIn();
